@@ -12,7 +12,7 @@
 		chainData
 	} from 'svelte-web3';
 
-	export let address = '0x6fae2E9C348025F39Af1C2E4Ecba3749c3BED9fE';
+	export let address = '0x7b0d0b4f72b1D8D928e0Db6c3E01744c0B773DA2';
 
 	let allJsonEntries = [];
 
@@ -77,8 +77,8 @@
 		for (var i = 0; i < data.length; i++) {
 			var row = `<tr>
 							<td>${data[i].id}</td>
-							<td>${data[i].fishName}</td>
-							<td>${data[i].catched.length > 0 ? data[i].catched : 'unknown'}</td>
+							<td>${data[i].caught.length > 0 ? data[i].caught : 'unknown'}</td>
+							<td>${data[i].location.length > 0 ? data[i].location : 'unknown'}</td>
 							<td>${data[i].species}</td>
 							<td>${data[i].gender}</td>
 							<td>${data[i].healthNote}</td>
@@ -110,15 +110,15 @@
 				</div>
 			</div>
 
-			<div style="width: 10%; margin-left: 4%" class="form-group">
+			<div style="width: 10%;" class="form-group">
 				<input class="form-control" id="searchInput" type="text" placeholder="filter id" />
 			</div>
 			<table class="table container">
 				<thead>
 					<tr>
 						<th scope="col">id</th>
-						<th scope="col">fishName</th>
-						<th scope="col">catched</th>
+						<th scope="col">caught</th>
+						<th scope="col">location</th>
 						<th scope="col">species</th>
 						<th scope="col">gender</th>
 						<th scope="col">healthNote</th>

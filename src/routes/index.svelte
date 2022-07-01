@@ -18,7 +18,7 @@
 		enableTime: false
 	};
 
-	let sendAdress = '0x6fae2E9C348025F39Af1C2E4Ecba3749c3BED9fE';
+	let sendAdress = '0x7b0d0b4f72b1D8D928e0Db6c3E01744c0B773DA2';
 
 	// $: checkAccount = $selectedAccount || '0x0000000000000000000000000000000000000000';
 	// $: balance = $connected ? $web3.eth.getBalance(checkAccount) : '';
@@ -100,10 +100,14 @@
 						<br />
 
 						<div class="row no-gutters form-group">
-							<label class="col-sm-2">Fish Name</label>
+							<label class="col-sm-2">Caught</label>
 							<div class="col-sm-10">
 								{#if $connected}
-									<input name="fishName" rows="1" class="form-control is-invalid" required />
+									<Flatpickr
+										options={{ enableTime: false }}
+										name="caught"
+										class="form-control bg-white"
+									/>
 								{:else}
 									<input rows="1" class="form-control" readonly />
 								{/if}
@@ -113,14 +117,10 @@
 						<br />
 
 						<div class="row no-gutters form-group">
-							<label class="col-sm-2">Catched</label>
+							<label class="col-sm-2">Location</label>
 							<div class="col-sm-10">
 								{#if $connected}
-									<Flatpickr
-										options={{ enableTime: false }}
-										name="catched"
-										class="form-control bg-white"
-									/>
+									<input name="location" rows="1" class="form-control is-invalid" required />
 								{:else}
 									<input rows="1" class="form-control" readonly />
 								{/if}
